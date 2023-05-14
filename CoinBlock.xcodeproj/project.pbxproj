@@ -11,6 +11,10 @@
 		172675A72A111A7200DF4372 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172675A62A111A7200DF4372 /* ContentView.swift */; };
 		172675A92A111A7200DF4372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 172675A82A111A7200DF4372 /* Assets.xcassets */; };
 		172675AC2A111A7200DF4372 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 172675AB2A111A7200DF4372 /* Preview Assets.xcassets */; };
+		176500D62A11297100AD7BE3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176500D52A11297100AD7BE3 /* Color.swift */; };
+		176500DC2A112C5E00AD7BE3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176500DB2A112C5E00AD7BE3 /* HomeView.swift */; };
+		176500E02A112E2900AD7BE3 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176500DF2A112E2900AD7BE3 /* CircleButtonView.swift */; };
+		176500E22A11331700AD7BE3 /* CircleButtonAnimtionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176500E12A11331700AD7BE3 /* CircleButtonAnimtionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		172675A62A111A7200DF4372 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		172675A82A111A7200DF4372 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		172675AB2A111A7200DF4372 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		176500D52A11297100AD7BE3 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		176500DB2A112C5E00AD7BE3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		176500DF2A112E2900AD7BE3 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
+		176500E12A11331700AD7BE3 /* CircleButtonAnimtionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimtionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +60,9 @@
 			isa = PBXGroup;
 			children = (
 				172675A42A111A7200DF4372 /* CoinBlockApp.swift */,
+				176500D72A112C0600AD7BE3 /* Core */,
 				172675A62A111A7200DF4372 /* ContentView.swift */,
+				176500D22A11292800AD7BE3 /* Extastions */,
 				172675A82A111A7200DF4372 /* Assets.xcassets */,
 				172675AA2A111A7200DF4372 /* Preview Content */,
 			);
@@ -65,6 +75,64 @@
 				172675AB2A111A7200DF4372 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		176500D22A11292800AD7BE3 /* Extastions */ = {
+			isa = PBXGroup;
+			children = (
+				176500D52A11297100AD7BE3 /* Color.swift */,
+			);
+			path = Extastions;
+			sourceTree = "<group>";
+		};
+		176500D72A112C0600AD7BE3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				176500DD2A112DB300AD7BE3 /* Components */,
+				176500D82A112C1600AD7BE3 /* Home */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		176500D82A112C1600AD7BE3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				176500DA2A112C3B00AD7BE3 /* ViewModels */,
+				176500D92A112C2400AD7BE3 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		176500D92A112C2400AD7BE3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				176500DB2A112C5E00AD7BE3 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		176500DA2A112C3B00AD7BE3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		176500DD2A112DB300AD7BE3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				176500DE2A112E0000AD7BE3 /* CircleButton */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		176500DE2A112E0000AD7BE3 /* CircleButton */ = {
+			isa = PBXGroup;
+			children = (
+				176500DF2A112E2900AD7BE3 /* CircleButtonView.swift */,
+				176500E12A11331700AD7BE3 /* CircleButtonAnimtionView.swift */,
+			);
+			path = CircleButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +205,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				176500E02A112E2900AD7BE3 /* CircleButtonView.swift in Sources */,
+				176500E22A11331700AD7BE3 /* CircleButtonAnimtionView.swift in Sources */,
 				172675A72A111A7200DF4372 /* ContentView.swift in Sources */,
+				176500DC2A112C5E00AD7BE3 /* HomeView.swift in Sources */,
 				172675A52A111A7200DF4372 /* CoinBlockApp.swift in Sources */,
+				176500D62A11297100AD7BE3 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,11 +342,13 @@
 				DEVELOPMENT_TEAM = JH7VUP2CH4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = CoinBlock;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,11 +373,13 @@
 				DEVELOPMENT_TEAM = JH7VUP2CH4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = CoinBlock;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
