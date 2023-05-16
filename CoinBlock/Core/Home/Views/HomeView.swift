@@ -37,7 +37,7 @@ struct HomeView_Previews: PreviewProvider {
     }
 }
 
-extension HomeView{
+extension HomeView {
     private var homeHeader: some View {
         HStack{
             CircleButtonView(iconName: showPortfolio ? "plus"  : "info")
@@ -57,7 +57,6 @@ extension HomeView{
                     withAnimation(.spring()){
                         showPortfolio.toggle()
                     }
-                    
                 }
         }
         .padding(.horizontal)
