@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1725A0B22A13C4CB007755EF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1725A0B12A13C4CB007755EF /* HomeViewModel.swift */; };
+		1725A0B52A13D466007755EF /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1725A0B42A13D466007755EF /* CoinDataService.swift */; };
 		172675A52A111A7200DF4372 /* CoinBlockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172675A42A111A7200DF4372 /* CoinBlockApp.swift */; };
 		172675A72A111A7200DF4372 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172675A62A111A7200DF4372 /* ContentView.swift */; };
 		172675A92A111A7200DF4372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 172675A82A111A7200DF4372 /* Assets.xcassets */; };
@@ -19,9 +21,12 @@
 		17B1C64F2A11FC190014B16B /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B1C64E2A11FC190014B16B /* CoinRowView.swift */; };
 		17B1C6512A11FC8A0014B16B /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B1C6502A11FC8A0014B16B /* PreviewProvider.swift */; };
 		17B1C6532A1201EA0014B16B /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B1C6522A1201EA0014B16B /* Double.swift */; };
+		17D126BB2A1516D000C85A4E /* NetworkingManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D126BA2A1516D000C85A4E /* NetworkingManger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1725A0B12A13C4CB007755EF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		1725A0B42A13D466007755EF /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
 		172675A12A111A7200DF4372 /* CoinBlock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinBlock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		172675A42A111A7200DF4372 /* CoinBlockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinBlockApp.swift; sourceTree = "<group>"; };
 		172675A62A111A7200DF4372 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +40,7 @@
 		17B1C64E2A11FC190014B16B /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		17B1C6502A11FC8A0014B16B /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		17B1C6522A1201EA0014B16B /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		17D126BA2A1516D000C85A4E /* NetworkingManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1725A0B32A13D424007755EF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1725A0B42A13D466007755EF /* CoinDataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		172675982A111A7200DF4372 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				172675A42A111A7200DF4372 /* CoinBlockApp.swift */,
+				17D126B72A15163E00C85A4E /* utilities */,
+				1725A0B32A13D424007755EF /* Services */,
 				17B1C64B2A11F6350014B16B /* Models */,
 				176500D22A11292800AD7BE3 /* Extastions */,
 				176500D72A112C0600AD7BE3 /* Core */,
@@ -126,6 +142,7 @@
 		176500DA2A112C3B00AD7BE3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				1725A0B12A13C4CB007755EF /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -153,6 +170,14 @@
 				17B1C64C2A11F6620014B16B /* Coin.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		17D126B72A15163E00C85A4E /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+				17D126BA2A1516D000C85A4E /* NetworkingManger.swift */,
+			);
+			path = utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,9 +251,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				17B1C64F2A11FC190014B16B /* CoinRowView.swift in Sources */,
+				1725A0B22A13C4CB007755EF /* HomeViewModel.swift in Sources */,
 				176500E02A112E2900AD7BE3 /* CircleButtonView.swift in Sources */,
 				176500E22A11331700AD7BE3 /* CircleButtonAnimtionView.swift in Sources */,
 				172675A72A111A7200DF4372 /* ContentView.swift in Sources */,
+				1725A0B52A13D466007755EF /* CoinDataService.swift in Sources */,
+				17D126BB2A1516D000C85A4E /* NetworkingManger.swift in Sources */,
 				176500DC2A112C5E00AD7BE3 /* HomeView.swift in Sources */,
 				172675A52A111A7200DF4372 /* CoinBlockApp.swift in Sources */,
 				176500D62A11297100AD7BE3 /* Color.swift in Sources */,

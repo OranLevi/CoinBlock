@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @EnvironmentObject private var vm: HomeViewModel
+    
     @State private var showPortfolio: Bool = false
     
     var body: some View {
@@ -21,6 +23,20 @@ struct HomeView: View {
             // content
             VStack{
                 homeHeader
+                columnTitles
+                    .font(.caption)
+                    .foregroundColor(Color.theme.secondaryText)
+                    .padding(.horizontal)
+                
+                if !showPortfolio {
+                    allCoinList
+                        .transition(.move(edge: .leading))
+                }
+                if showPortfolio {
+                    portfolioCoin
+                        .transition(.move(edge: .trailing))
+                }
+                
                 Spacer(minLength: 0)
             }
             
@@ -33,7 +49,7 @@ struct HomeView_Previews: PreviewProvider {
         NavigationView {
             HomeView()
                 .navigationBarHidden(true)
-        }
+        }.environmentObject(dev.homeVM)
     }
 }
 
@@ -60,5 +76,37 @@ extension HomeView {
                 }
         }
         .padding(.horizontal)
+    }
+    
+    private var allCoinList: some View {
+        List{
+            ForEach(vm.allCoin) { item in
+                CoinRowView(coin: item, showHoldingColumn: false)
+                    .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
+            }
+        }
+        .listStyle(PlainListStyle())
+    }
+    
+    private var portfolioCoin: some View {
+        List{
+            ForEach(vm.portfolioCoin) { item in
+                CoinRowView(coin: item, showHoldingColumn: true)
+                    .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
+            }
+        }
+        .listStyle(PlainListStyle())
+    }
+    
+    private var columnTitles: some View {
+        HStack{
+            Text("Coin")
+            Spacer()
+            if showPortfolio {
+                Text("Holding")
+            }
+            Text("Price")
+                .frame(width: UIScreen.main.bounds.width / 3.5, alignment: .trailing)
+        }
     }
 }
