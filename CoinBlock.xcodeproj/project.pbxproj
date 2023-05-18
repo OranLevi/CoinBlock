@@ -25,6 +25,7 @@
 		17D126BE2A15298200C85A4E /* CoinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D126BD2A15298200C85A4E /* CoinImageView.swift */; };
 		17D126C02A152C2400C85A4E /* CoinImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D126BF2A152C2400C85A4E /* CoinImageService.swift */; };
 		17D126C22A152E0B00C85A4E /* CoinImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D126C12A152E0B00C85A4E /* CoinImageViewModel.swift */; };
+		17EAB0F32A162497004B6561 /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EAB0F22A162497004B6561 /* LocalFileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		17D126BD2A15298200C85A4E /* CoinImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageView.swift; sourceTree = "<group>"; };
 		17D126BF2A152C2400C85A4E /* CoinImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageService.swift; sourceTree = "<group>"; };
 		17D126C12A152E0B00C85A4E /* CoinImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageViewModel.swift; sourceTree = "<group>"; };
+		17EAB0F22A162497004B6561 /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				17D126BA2A1516D000C85A4E /* NetworkingManger.swift */,
+				17EAB0F22A162497004B6561 /* LocalFileManager.swift */,
 			);
 			path = utilities;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				1725A0B22A13C4CB007755EF /* HomeViewModel.swift in Sources */,
 				176500E02A112E2900AD7BE3 /* CircleButtonView.swift in Sources */,
 				176500E22A11331700AD7BE3 /* CircleButtonAnimtionView.swift in Sources */,
+				17EAB0F32A162497004B6561 /* LocalFileManager.swift in Sources */,
 				172675A72A111A7200DF4372 /* ContentView.swift in Sources */,
 				17D126BE2A15298200C85A4E /* CoinImageView.swift in Sources */,
 				1725A0B52A13D466007755EF /* CoinDataService.swift in Sources */,
