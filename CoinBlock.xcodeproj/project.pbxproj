@@ -22,6 +22,9 @@
 		17B1C6512A11FC8A0014B16B /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B1C6502A11FC8A0014B16B /* PreviewProvider.swift */; };
 		17B1C6532A1201EA0014B16B /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B1C6522A1201EA0014B16B /* Double.swift */; };
 		17D126BB2A1516D000C85A4E /* NetworkingManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D126BA2A1516D000C85A4E /* NetworkingManger.swift */; };
+		17D126BE2A15298200C85A4E /* CoinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D126BD2A15298200C85A4E /* CoinImageView.swift */; };
+		17D126C02A152C2400C85A4E /* CoinImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D126BF2A152C2400C85A4E /* CoinImageService.swift */; };
+		17D126C22A152E0B00C85A4E /* CoinImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D126C12A152E0B00C85A4E /* CoinImageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		17B1C6502A11FC8A0014B16B /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		17B1C6522A1201EA0014B16B /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		17D126BA2A1516D000C85A4E /* NetworkingManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManger.swift; sourceTree = "<group>"; };
+		17D126BD2A15298200C85A4E /* CoinImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageView.swift; sourceTree = "<group>"; };
+		17D126BF2A152C2400C85A4E /* CoinImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageService.swift; sourceTree = "<group>"; };
+		17D126C12A152E0B00C85A4E /* CoinImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				1725A0B42A13D466007755EF /* CoinDataService.swift */,
+				17D126BF2A152C2400C85A4E /* CoinImageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -150,6 +157,7 @@
 		176500DD2A112DB300AD7BE3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				17D126BC2A15295800C85A4E /* CoinImage */,
 				176500DE2A112E0000AD7BE3 /* CircleButton */,
 			);
 			path = Components;
@@ -178,6 +186,15 @@
 				17D126BA2A1516D000C85A4E /* NetworkingManger.swift */,
 			);
 			path = utilities;
+			sourceTree = "<group>";
+		};
+		17D126BC2A15295800C85A4E /* CoinImage */ = {
+			isa = PBXGroup;
+			children = (
+				17D126BD2A15298200C85A4E /* CoinImageView.swift */,
+				17D126C12A152E0B00C85A4E /* CoinImageViewModel.swift */,
+			);
+			path = CoinImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,13 +272,16 @@
 				176500E02A112E2900AD7BE3 /* CircleButtonView.swift in Sources */,
 				176500E22A11331700AD7BE3 /* CircleButtonAnimtionView.swift in Sources */,
 				172675A72A111A7200DF4372 /* ContentView.swift in Sources */,
+				17D126BE2A15298200C85A4E /* CoinImageView.swift in Sources */,
 				1725A0B52A13D466007755EF /* CoinDataService.swift in Sources */,
 				17D126BB2A1516D000C85A4E /* NetworkingManger.swift in Sources */,
 				176500DC2A112C5E00AD7BE3 /* HomeView.swift in Sources */,
 				172675A52A111A7200DF4372 /* CoinBlockApp.swift in Sources */,
 				176500D62A11297100AD7BE3 /* Color.swift in Sources */,
+				17D126C22A152E0B00C85A4E /* CoinImageViewModel.swift in Sources */,
 				17B1C6512A11FC8A0014B16B /* PreviewProvider.swift in Sources */,
 				17B1C6532A1201EA0014B16B /* Double.swift in Sources */,
+				17D126C02A152C2400C85A4E /* CoinImageService.swift in Sources */,
 				17B1C64D2A11F6620014B16B /* Coin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
