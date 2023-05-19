@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StatisticView: View {
     
-    let stat: Statistic
+    let stat: StatisticModel
     
     var body: some View {
         VStack {
@@ -41,7 +41,8 @@ struct StatisticView_Previews: PreviewProvider {
             StatisticView(stat: dev.stat1)
             StatisticView(stat: dev.stat2)
             StatisticView(stat: dev.stat3)
-        }.padding()
-            .previewLayout(.sizeThatFits)
+        }
+        .padding()
+        .previewLayout(.sizeThatFits)
     }
 }

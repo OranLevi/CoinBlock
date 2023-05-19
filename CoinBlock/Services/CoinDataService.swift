@@ -10,7 +10,7 @@ import Combine
 
 class CoinDataService {
     
-    @Published var allCoin: [Coin] = []
+    @Published var allCoin: [CoinModel] = []
     var coinSubscription: AnyCancellable?
     
     init(){
@@ -25,7 +25,7 @@ class CoinDataService {
         
         coinSubscription =
         NetworkingManger.download(url: url)
-            .decode(type: [Coin].self, decoder: JSONDecoder())
+            .decode(type: [CoinModel].self, decoder: JSONDecoder())
             .sink { completion in
                 NetworkingManger.handleCompletion(completion: completion)
             } receiveValue: { [weak self] returnedCoins in

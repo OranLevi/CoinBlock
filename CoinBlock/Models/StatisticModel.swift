@@ -1,5 +1,5 @@
 //
-//  Statistic.swift
+//  StatisticModel.swift
 //  CoinBlock
 //
 //  Created by Oran Levi on 19/05/2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Statistic : Identifiable {
+struct StatisticModel : Identifiable {
     let id = UUID().uuidString
     let title: String
     let value: String
@@ -21,4 +21,4 @@ struct Statistic : Identifiable {
     
 }
 
-let newModel = Statistic(title: "", value: "")
+let newModel = StatisticModel(title: "", value: "")
