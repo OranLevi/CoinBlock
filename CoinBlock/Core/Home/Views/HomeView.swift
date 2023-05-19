@@ -23,10 +23,20 @@ struct HomeView: View {
             // content
             VStack{
                 homeHeader
+                
+                HomeStatisticView(showPortfolio: $showPortfolio)
+                
+                SearchBarView(searchText: $vm.searchText)
+                
                 columnTitles
                     .font(.caption)
                     .foregroundColor(Color.theme.secondaryText)
                     .padding(.horizontal)
+                
+                if vm.allCoin.isEmpty && vm.searchText.count > 1 {
+                    Text("No results")
+                        .offset(y: UIScreen.main.bounds.height / 4)
+                }
                 
                 if !showPortfolio {
                     allCoinList
