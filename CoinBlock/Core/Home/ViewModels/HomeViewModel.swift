@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 import Combine
 
 class HomeViewModel: ObservableObject {
@@ -18,6 +19,7 @@ class HomeViewModel: ObservableObject {
     
     private let coinDataService = CoinDataService()
     private let marketDataService = MarketDataService()
+    private let portfolioDataService = PortfolioDataService()
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -75,5 +77,26 @@ class HomeViewModel: ObservableObject {
                 self?.statistic = returnMarketData
             }
             .store(in: &cancellables)
+        
+        //update portfolio coins
+        $allCoin
+            .combineLatest(portfolioDataService.$savedEntities)
+            .map { (coinModels, portfolioEntities ) -> [CoinModel] in
+                coinModels
+                    .compactMap { (coin) -> CoinModel? in
+                        guard let entity = portfolioEntities.first(where: {$0.coinID == coin.id})else {
+                            return nil
+                        }
+                        return coin.updateHoldings(amount: entity.amount)
+                    }
+            }
+            .sink { [weak self] (returnPortfolio) in
+                self?.portfolioCoin = returnPortfolio
+            }
+            .store(in: &cancellables)
+    }
+    
+    func updatePortfolio(coin: CoinModel, amount: Double){
+        portfolioDataService.updatePortfolio(coin: coin, amount: amount)
     }
 }
