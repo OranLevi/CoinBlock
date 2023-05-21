@@ -49,8 +49,14 @@ struct HomeView: View {
                         .transition(.move(edge: .leading))
                 }
                 if showPortfolio {
-                    portfolioCoin
-                        .transition(.move(edge: .trailing))
+                    ZStack(alignment: .top){
+                        if vm.portfolioCoin.isEmpty && vm.searchText.isEmpty {
+                            portfolioEmptyText
+                        } else {
+                            portfolioCoin
+                        }
+                    }
+                    .transition(.move(edge: .trailing))
                 }
                 
                 Spacer(minLength: 0)
@@ -78,7 +84,8 @@ extension HomeView {
     
     private var homeHeader: some View {
         HStack{
-            CircleButtonView(iconName: showPortfolio ? "plus"  : "info")
+            CircleButtonView(iconName: "plus")
+                .opacity(showPortfolio ? 1 : 0)
                 .onTapGesture {
                     if showPortfolio {
                         showPortfolioView.toggle()
@@ -187,6 +194,15 @@ extension HomeView {
             })
             .rotationEffect(Angle(degrees: vm.isLoading ? 360 : 0),anchor: .center)
         }
+    }
+    
+    private var portfolioEmptyText: some View{
+        Text("You haven't added any coins to your portfolio yet! Click the + button to get started.")
+            .font(.callout)
+            .foregroundColor(Color.theme.accent)
+            .fontWeight(.medium)
+            .multilineTextAlignment(.center)
+            .padding(50)
     }
 }
 
