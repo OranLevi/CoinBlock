@@ -9,9 +9,29 @@ import SwiftUI
 
 @main
 struct CoinBlockApp: App {
+    
+    @StateObject private var vm = HomeViewModel()
+    
+    @State private var showLaunchView: Bool = true
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ZStack{
+                NavigationView {
+                    HomeView()
+                        .navigationBarHidden(true)
+                }
+                .navigationViewStyle(StackNavigationViewStyle())
+                .environmentObject(vm)
+                
+                ZStack{
+                    if showLaunchView {
+                        LaunchView(showLaunchView: $showLaunchView)
+                            .transition(.move(edge: .leading))
+                    }
+                }
+                .zIndex(2.0)
+            }
         }
     }
 }
